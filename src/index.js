@@ -7,8 +7,8 @@ const replaceCode = (str, map) => {
     var { onReload, opt } = map;
 
     return str
-            .replace('PROPS || {}', JSON.stringify(opt))
-            .replace('hookOnReload || Function.prototype', onReload.toString());
+            .replace('injectProps', JSON.stringify(opt))
+            .replace('injectOnReload', onReload.toString());
 };
 
 class WebExtension {

@@ -1,5 +1,5 @@
-var PROPS = PROPS || {};
-var hookOnReload = hookOnReload || Function.prototype;
+var PROPS = injectProps;
+var hookOnReload = injectOnReload || Function.prototype;
 
 const io = require('socket.io-client');
 const socket = io(`http://127.0.0.1:${PROPS.port}`);
