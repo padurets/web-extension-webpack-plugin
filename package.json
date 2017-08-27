@@ -1,7 +1,7 @@
 {
   "name": "web-extension-webpack-plugin",
   "version": "0.0.1",
-  "description": "devtool for web extension",
+  "description": "webpack plugin for auto reload web extension",
   "main": "src",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,5 +22,34 @@
   "dependencies": {
     "socket.io": "^2.0.3",
     "socket.io-client": "^2.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/padurets/web-extension-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "devtool",
+    "development",
+    "auto",
+    "reload",
+    "dev",
+    "server",
+    "dev-server",
+    "web",
+    "extensions",
+    "web extensions",
+    "WebExtension",
+    "browser extensions",
+    "add-ons",
+    "mozilla",
+    "firefox",
+    "google",
+    "chrome",
+    "opera"
+  ],
+  "bugs": {
+    "url": "https://github.com/padurets/web-extension-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/padurets/web-extension-webpack-plugin#readme"
 }
