@@ -7,7 +7,8 @@ const config = {
     },
     default_props: {
         background: null,
-        port: 7031
+        port: 7031,
+        onReload: Function.prototype
     }
 };
 

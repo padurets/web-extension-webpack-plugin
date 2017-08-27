@@ -12,12 +12,12 @@ class Server {
         });
     }
 
-    sayReload(cb){
+    sayReload(){
         var { socket } = this;
 
         if(socket){
             socket.emit('reload', {}, (tabs) => {
-                this.tabs = tabs
+                this.tabs = tabs;
             });
         }
     }

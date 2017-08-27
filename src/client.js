@@ -1,6 +1,8 @@
-const CNST = PROPS;
+var PROPS = PROPS || {};
+var hookOnReload = hookOnReload || Function.prototype;
+
 const io = require('socket.io-client');
-const socket = io(`http://127.0.0.1:${CNST.port}`);
+const socket = io(`http://127.0.0.1:${PROPS.port}`);
 const { id: ext_id } = chrome.runtime;
 
 const onReload = (query = {}, cb) => {
@@ -10,6 +12,7 @@ const onReload = (query = {}, cb) => {
 
     chrome.tabs.query(query, (tabs) => {
         cb(tabs);
+        hookOnReload();
         chrome.runtime.reload();
     });
 };

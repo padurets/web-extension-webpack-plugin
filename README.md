@@ -1,16 +1,28 @@
 ## Settings
-
 ```js
 new WebExtension({
     background: './background.js', // required
-    port: 7031 // by default
+    port: 7031, // by default (for socket),
+    onReload: Function.prototype // performed in background file
 })
 ```
 
-## Example webpack.config.js
+## Examples
 
+#### Reload other tabs
 ```js
+new WebExtension({
+    background: './background.js',
+    onReload: () => {
+        chrome.tabs.query({ url: ['*://www.instagram.com/*'] }, (tabs) => {
+            tabs.forEach((tab) => chrome.tabs.reload(tab.id));
+        });
+    }
+})
+```
 
+#### webpack.config.js
+```js
 const webpack = require('webpack');
 const WebExtension = require('web-extension-webpack-plugin');
 const is_pro = process.env.NODE_ENV === 'production';
@@ -40,6 +52,4 @@ if(!is_pro){
         })
     );
 }
-
-
 ```
