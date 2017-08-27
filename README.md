@@ -1,7 +1,7 @@
 ## Settings
 
 ```js
-new WebExtensionReloader({
+new WebExtension({
     background: './background.js', // required
     port: 7031 // by default
 })
@@ -35,7 +35,7 @@ const config = {
 
 if(!is_pro){
     config.plugins.push(
-        new WebExtensionReloader({
+        new WebExtension({
             background: './background.js'
         })
     );
