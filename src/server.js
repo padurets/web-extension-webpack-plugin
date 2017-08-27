@@ -15,8 +15,6 @@ class Server {
     sayReload(cb){
         var { socket } = this;
 
-        console.log('socket', socket);
-
         if(socket){
             socket.emit('reload', {}, (tabs) => {
                 this.tabs = tabs

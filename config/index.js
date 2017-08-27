@@ -1,7 +1,7 @@
 const path = require('path');
 const config = {
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, '../dist'),
         client_filename: 'client.js',
         ext_filename: 'index.js',
     },
