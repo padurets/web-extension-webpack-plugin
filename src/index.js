@@ -44,6 +44,16 @@ class WebExtension {
 
                     callback()
                 });
+            }else{
+                console.log('\n\n=== WEB EXTENSION WEBPACK PLUGIN ===');
+                console.log(`\nbackground file with name ${props.background} not found in chunks:\n`);
+                Object.keys(assets).forEach((key) => {
+                    if(key.match(/\.js+$/i)){
+                        console.log(`- ${key}`);
+                    }
+                });
+                console.log('\n=======\n\n');
+                callback();
             }
         });
     }
