@@ -1,4 +1,4 @@
-### install
+## install
 ```sh
 npm i -D web-extension-webpack-plugin
 ```
