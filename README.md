@@ -1,3 +1,8 @@
+### install
+```sh
+npm i -D web-extension-webpack-plugin
+```
+
 ## Settings
 ```js
 new WebExtension({
